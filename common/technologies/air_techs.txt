@@ -466,7 +466,7 @@ technologies = {
             }
             modifier = {
                 factor = 1.5
-                date > 1941-06-01
+                date > 1941.06.01
                 
             }
             modifier = {

@@ -1851,13 +1851,13 @@ tactic_dday_landings = {
             }
             OR = {
                 AND = {
-                    date < 1944-07-01
-                    date > 1944-05-31
+                    date < 1944.07.01
+                    date > 1944.05.31
                     
                 }
                 AND = {
-                    date < 1945-07-01
-                    date > 1945-05-31
+                    date < 1945.07.01
+                    date > 1945.05.31
                     
                 }
                 
