@@ -15,6 +15,8 @@
  RESEARCH_RESEARCH:0 "Research"
  RESEARCH_TAB_SLOTS: "Research Slots"
  RESEARCH_TAB_FACILITIES: "Experimental Facilities"
+ RESEARCH_FOLDER_TAB_CYCLE_TOOLTIP:0 "£GFX_tab : Cycle to the next tab.\n£GFX_shift  + £GFX_tab : Cycle to the previous tab."
+ RESEARCH_FOLDER_TAB_KEY_TOOLTIP:0 "£GFX_$KEY$ : Jump to this tab."
  RESEARCH_DONE:0 "Researched"
  RESEARCH_TIME_TO_COMPLETE:0 "Research time: $TIME|H$"
  RESEARCH_IDEA_BONUS_ENTRY:0 "$IDEA$: $FACTOR|G=0%$"
@@ -213,6 +215,8 @@
  infantry_at_desc:0 "Arming our infantry units with anti-tank rifles will allow them to take out lighter armored vehicles while maintaining mobility."
  infantry_at2:0 "Infantry Anti-Tank II"
  infantry_at2_desc:0 "For infantry to effectively engage heavier armored units, high-explosive anti-tank weapons need to be made smaller and lighter."
+ support_weapons:0 "Support Weapons I"
+ support_weapons_desc:0 "Automatic weapons are becoming more portable. Submachine guns have already proven effective and the development of hand-held support weapons must continue."
  support_weapons2:0 "Support Weapons II"
  support_weapons2_desc:0 "The development of automatic weapons which combine the aspects of light and heavy machine guns allows versatility in how our infantry employ their equipment."
  support_weapons3:0 "Support Weapons III"
@@ -243,7 +247,7 @@
  rangers_tech2_desc:0 "Using woodland specialists en masse rather than as small recon units gives us the opportunity to conduct massive assaults against lightly defended sectors."
  rangers_tech3:0 "Rangers III"
  rangers_tech3_desc:0 "Operating in difficult areas require special equipment and special training methods. We need to ensure our troops are equipped with the latest tools, and trained using the latest methods."
-
+ 
  tech_special_forces:0 "Special Forces"
  tech_special_forces_desc:0 "Unconventional fighting requires specialist training. We need to ensure that our troops are prepared and able to adapt to harsh conditions."
  advanced_special_forces:0 "Advanced Special Forces Training"
@@ -258,10 +262,17 @@
  elite_forces_desc:0 "Only the best of the best will become special forces. The soldiers that make it through the training will be stronger, faster and fight harder than anyone else."
  jungle_warfare:0 "Jungle Warfare"
  jungle_warfare_desc:0 "Special training to make our soldiers effective in the jungle."
+ jungle_training_tech:0 "Jungle Training"
+ desert_training_tech:0 "Desert Training"
+ hills_training_tech:0 "Hills Training"
+ urban_training_tech:0 "Urban Training"
  HUN_light_infantry_tech:0 "Light Infantry Divisions Doctrine"
  HUN_light_infantry_tech_desc:0 "Reducing the amount of supporting arms in our infantry divisions makes them more flexible and gives them an edge in combat in restricted terrain like Cities and forests."
+ SWI_mountaineer_paratroopers_tech:0 "$SWI_mountaneer_paratroopers$"
  mountain_warfare:0 "Mountain Warfare"
  mountain_warfare_desc:0 "Special training to make our soldiers effective in mountain ranges."
+ mountain_defensive_training:0 "Mountain Defensive Training"
+ mountain_defensive_training_desc:0 "Special training will allow our troops to better defend in mountainous terrain."
  tech_recon:0 "Recon Company I"
  tech_recon_desc:0 "Sending smaller groups to scout ahead before moving in the main force allows us to gather intelligence about where the enemy is and how many we are facing."
  tech_recon2:0 "Recon Company II"
@@ -384,6 +395,9 @@
  advanced_rubber_processing_desc:1 "A general purpose synthetic rubber recipe with improved processes such as dodecyl mercaptan polymerization modifiers will allow us to expand synthetic rubber production."
  modern_rubber_processing:0 "Modern Rubber Processing"
  modern_rubber_processing_desc:1 "Moving to more optimized polymerization processes will result in lower costs and higher output."
+ POWERED_BUILDING:0 "Powered Construction: $VAL|+=%2$"
+ POWERED_DOCKYARD:0 "Powered Dockyard Output: $VAL|+=%2$"
+ POWERED_FACTORY:0 "Powered Factory Output: $VAL|+=%2$"
  construction1:0 "Construction I"
  construction1_desc:0 "Improved methods and materials allow us to construct buildings, both civilian and military, faster."
  construction2:0 "Construction II"
@@ -730,13 +744,13 @@
  GRAND_BATTLEPLAN_DOCTRINE_LABEL:1 "Grand Battleplan Doctrine"
  GRAND_BATTLEPLAN_DOCTRINE_DESC:0 "Extensive planning and preparation before engaging in battle is the key to success."
  MASS_ASSAULT_DOCTRINE_LABEL:1 "Mass Assault Doctrine"
-
+ 
  MOBILE_WARFARE_DOCTRINE:0 "Mobile Warfare"
  SUPERIOR_FIREPOWER_DOCTRINE:0 "Superior Firepower"
  GRAND_BATTLEPLAN_DOCTRINE:0 "Grand Battleplan"
  MASS_ASSAULT_DOCTRINE:0 "Mass Assault"
-
-
+ 
+ 
  MASS_ASSAULT_DOCTRINE_DESC:0 ""Perfect" weapons are overrated, a large number of "good enough" weapons is the path to victory!"
  MOBILE_INFANTRY_LABEL:0 "MOBILE INFANTRY"
  MOBILE_INFANTRY_LABEL_TT:0 "Improve speed and organization of motorized infantry."
@@ -823,6 +837,8 @@
  mountaineers_tech:0 "Mountaineers Technology"
  rangers_tech_cat: "Rangers Technology"
  engineers_tech:0 "Engineers Technology"
+ military_police_tech:0 "Military Police Technology"
+ signal_company_tech:0 "Signal Company Technology"
  construction_tech:0 "Construction technology"
  nuclear:0 "Nuclear Technology"
  rocketry:0 "Rocketry technology"
@@ -879,6 +895,8 @@
  cat_superior_firepower_research:0 "Superior Firepower Doctrine"
  cat_grand_battle_plan_research:0 "Grand Battleplan Doctrine"
  cat_mass_assault_research:0 "Mass Assault Doctrine"
+ cat_mass_mobilization_research:0 "Mass Mobilization Doctrine"
+ cat_deep_battle_research:0 "Deep Battle Doctrine"
  cat_strategic_destruction_research:0 "Strategic Destruction Doctrine"
  cat_battlefield_support_research:0 "Battlefield Support Doctrine"
  cat_operational_integrity_research:0 "Operational Integrity Doctrine"
@@ -891,6 +909,8 @@
  cat_superior_firepower:0 "Superior Firepower Doctrine"
  cat_grand_battle_plan:0 "Grand Battleplan Doctrine"
  cat_mass_assault:0 "Mass Assault Doctrine"
+ cat_mass_mobilization:0 "Mass Mobilization Doctrine"
+ cat_deep_battle:0 "Deep Battle Doctrine"
  cat_trade_interdiction:0 "Trade Interdiction Doctrine"
  cat_battlefield_support:0 "Battlefield Support Doctrine"
  infantry_weapons:0 "Infantry Weapons"
@@ -924,6 +944,7 @@
  ARTILLERY_TITLE_ROCKET:0 "ROCKET ARTILLERY"
  ARTILLERY_TITLE_AT:0 "ANTI-TANK"
  ARTILLERY_TITLE:0 "ARTILLERY"
+ ARTILLERT_TITLE_AA:0 "ANTI-AIR"
  ARTILLERY_TITLE_AA:0 "ANTI-AIR"
  NAVAL_TITLE_DESTROYERS:0 "DESTROYERS"
  NAVAL_TITLE_CRUISERS:0 "CRUISERS"
@@ -993,6 +1014,9 @@
  basic_ship_hull_heavy_short:0 "1936 Heavy Ship Hull"
  basic_ship_hull_cruiser:0 "1936 Cruiser Hull"
  basic_ship_hull_carrier:0 "1936 Carrier Hull"
+ early_carrier:0 "Early Carrier (Carrier I)"
+ basic_carrier:0 "Basic Carrier (Carrier II)"
+ improved_destroyer:0 "Improved Destroyer (Destroyer III)"
  basic_fire_control_system:0 "Basic Fire Control System"
  basic_fire_control_system_desc:0 "All fire of the ship's guns is controlled from a central position, ensuring a tighter grouping of shots and increases accuracy."
  improved_fire_control_system:0 "Improved Fire Control System"
@@ -1023,6 +1047,9 @@
  advanced_depth_charges_desc:1 "A mortar on board the destroyer can throw an explosive charge much further, allowing the ship to maintain sonar contact with the submarine throughout the attack and dramatically increasing its accuracy.\n\nMounting this module on §YLight Ships§! and §YCruisers§! will allow them to attack enemy §YSubmarines§!."
  modern_depth_charges:0 "Improved Depth Charge Mortar"
  modern_depth_charges_desc:1 "A larger propellant charge throws a proper depth charge set to a specific depth at a submarine from quite a distance.\n\nMounting this module on §YLight Ships§! and §YCruisers§! will allow them to attack enemy §YSubmarines§!."
+ improved_seaplane_tender:0 "Improved Seaplane Tender"
+ improved_seaplane_tender_desc:0 "Advancements in at-sea replenishment and recovery crane technology improves the efficiency of seaplane operations. \n\nMounting a §YSeaplane Tender§! module on §YDestroyer§! improves their ability to detect enemy ships."
+ seaplane_tender_advice_tt:0 "\nMounting a §YSeaplane Tender§! module on §YDestroyers§! improves their ability to detect enemy ships."
  improved_airplane_launcher:0 "Improved Airplane Catapult"
  improved_airplane_launcher_desc:1 "An improved pneumatic mechanism allows much larger airplanes to be launched via catapult. This increases their search radius. \n\nMounting this module on §YCruisers§!, §YHeavy Ships§! or specialized §YSubmarines§! improves their ability to detect enemy ships."
  airplane_launcher_advice_tt:0 "\nMounting a §YCatapult§! module on §YCruisers§!, §YHeavy Ships§! or specialized §YSubmarines§! improves their ability to detect enemy ships."
@@ -1143,13 +1170,15 @@
  cat_ship_medium_battery:0 "Medium Batteries"
  cat_ship_heavy_battery:0 "Heavy Batteries"
  masterful_blitz:0 "Masterful Blitz"
+ grand_banzai_charge:0 "Grand Banzai Charge"
  masterful_blitz_desc:0 "We may not have invented the Blitzkrieg, but we will develop and refine this strategy so that even the most fortified enemy defense lines will not be able to stop the advance of our glorious army."
  penal_infantry:0 "Penal Battalions"
  penal_infantry_desc:0 "Penal battalions provide an opportunity for convicted soldiers and officers of the Red Army to bleed for the motherland and redeem themselves for the shameful or dishonorable actions committed in the past."
-
+ 
  camicie_nere_security_militias:0 "$ITA_camicie_nere$"
  blackshirt_assault_battalion_tech:0 "$blackshirt_assault_battalion$"
  mountain_warfare_militias_tech:0 "$ITA_grande_rivolta_rurale$"
+ basic_heavy_cruiser:0 "Basic Heavy Cruiser (Heavy Cruiser II)"
 #this file is a mess, so Im just plopping some BBA loc here
  basic_dp_light_battery:0 "Basic Dual-Purpose Battery"
  basic_dp_light_battery_desc:0 "Combining anti-ship and anti-air guns in a single mount allows for more flexibility and saves weight.\n\nMounting this module increases §Y$EQUIPMENT_DESIGNER_LG_ATTACK_ICON_TOOLTIP$§!, which helps in engaging enemy §YScreening Ships§!. These modules also increase §Y$EQUIPMENT_DESIGNER_ANTI_AIR_ATTACK_ICON_TOOLTIP$§!.\nMounting a §YSecondary Battery§! Module gives a §Y$ship_hull_cruiser$§!, §Y$ship_hull_carrier$§!, or §Y$ship_hull_heavy$§! a small amount of §Y$EQUIPMENT_DESIGNER_LG_ATTACK_ICON_TOOLTIP$§! and allows it to engage a second target."
@@ -1186,6 +1215,11 @@
  ski_troops_desc: "Cold weather specialists are vital to our battlefield tactics. By formally recognizing these experts in our military constitution, we can free up resources and training to elevate them even further."
  special_forces_recon: "Battlefield Intelligence"
  special_forces_recon_desc: "Our elite regiments benefit from counter-intelligence and battlefield awareness second to none. Additional training is sure to benefit us further."
+ gwtank:0 "Great War Tank"
+ basic_light_tank:0 "L. Tank I"
+ armored_car1:0 "$gw_armored_car_equipment$"
+ armored_car2:0 "$armored_car_equipment_1$"
+ armored_car3:0 "$armored_car_equipment_2$"
  #below were predate aat but were at the bottom of the file, likely duplicate
  #gwtank:0 "Great War Tank"
  #basic_light_tank:0 "L. Tank I"
@@ -1250,13 +1284,13 @@
  cat_paratroopers_doctrine: "Paratroopers Doctrine"
  cat_rangers_doctrine: "Rangers Doctrine"
  cat_shocktroops_doctrine: "Shocktroopers Doctrine"
-
+ 
  RESEARCH_REPLACE_MIO_TITLE: "Replace Design Team"
  RESEARCH_MIO_XP_COST_DESC: "Assigning $ORG|H$ to $TECH|H$ will cost $COST$."
  RESEARCH_MIO_XP_COST_DESC_REPLACE: "Assigning $ORG|H$ instead of $OLD_ORG|H$ to $TECH|H$ with cost $COST$."
  naval_armor: "Naval Armor"
  naval_artillery: "Naval Artillery"
-
+ 
  mio_cat_tech_all_armor_and_modules: "All Armor Technologies"
  mio_cat_tech_light_armor_and_modules: "Light Armor Technologies" #Cannot talk about modules because of DLC lock tack
  mio_cat_tech_medium_armor_and_modules: "Medium Armor Technologies" #Cannot talk about modules because of DLC lock tack
@@ -1277,7 +1311,7 @@
  mio_cat_tech_all_motorized_mechanized: "All Motorized and Mechanized Technologies"
  militia_tech: "Militias"
  TOA_jungle_pioneers_support_tech: "Jungle Pioneers"
-
+ 
  basic_fortification_tech: "Basic Fortification"
  basic_fortification_tech_desc: "By using stronger materials and metal reinforcements within the structures, we can construct larger fortifications without having to worry about them collapsing."
  land_fort_tech_1: "Improved Land Forts"
@@ -1288,14 +1322,14 @@
  coastal_fort_tech_1_desc: "By making better use of the land surrounding our coastal fortifications, and incorporating new technology to boot, we can strengthen our existing structures and expand them even further."
  coastal_fort_tech_2: "Advanced Coastal Fortifications"
  coastal_fort_tech_2_desc: "By building our bunkers and fortifications further into the cliff-sides and hills, we can construct even larger complexes that have the ability to repel even the greatest of naval invasion forces."
-
+ 
  sp_rockets_improved_guidance: "Improved Guidance"
  sp_rockets_improved_guidance_desc: "Better guidance systems for rockets, will allow us to send our flying bombs further, making them an even bigger threat to our enemies. By improving the guidance systems for smaller rockets, our rocket artillery will be able to improve their aim as well."
  sp_rockets_rocket_bomber: "$rocket_propelled_bombs$"
  sp_rockets_rocket_bomber_desc: "$rocket_propelled_bombs_desc$"
  sp_rockets_improved_rocket_bomber: "$improved_rocket_propelled_bombs$"
  sp_rockets_improved_rocket_bomber_desc: "$improved_rocket_propelled_bombs_desc$"
-
+ 
  sp_armored_advanced_flamethrower_tech: "Advanced Flamethrower"
  sp_armored_advanced_flamethrower_tech_desc: "$advanced_flamethrower_desc$"
  sp_armored_lc_high_impact_obliterator_cannon_tech: "High-Impact Obliterator Cannon"
@@ -1346,23 +1380,27 @@
  sp_helicopter_artillery_observers_tech_desc: "Helicopters are able get a good vantage point of the battlefield regardless of the actual terrain, and thus make excellent forward scouts to provide accurate feedback to artillery barrages."
  sp_helicopter_med_evac_tech: "Helicopter Med-Evac Company"
  sp_helicopter_med_evac_tech_desc: "Incoming wounded! We have incoming wounded! Helicopters provide even faster casualty evacuation than regular ambulances."
-
+ 
  sp_rockets_dual_chamber_rocket_engine_1: "Dual Chamber Rocket Engines"
  sp_rockets_dual_chamber_rocket_engine_1_desc: "By adding a second combustion chamber to the engine, we can improve the flight time and effectiveness of our rocket engines."
  sp_rockets_dual_chamber_rocket_engine_2: "Advanced Dual Chamber Rocket Engines"
  sp_rockets_dual_chamber_rocket_engine_2_desc: "Further refinements of the dual combustion engine may lead to even greater improvements in the design's effectiveness."
+ sp_advance_sabot_shells:0 "Advanced Sabot Rounds" 
+ sp_advance_sabot_shells_desc:0 "The additional resources granted toward armor penetrating ammunition research has given us insight in how to improve Sabot stabilization in a multitude of use cases."
  
  reinforced_wings_mothership: "Reinforced Mothership Wings"
  reinforced_wings_mothership_desc: "Without their mothership, the fighters are essentially stranded in the air, severely limiting their operational effectiveness. Strengthening the mothership's air wings is the most cost-effective strategy to enhance the survivability of the entire squadron."
-
+ 
  
  miniature_fighters: "Miniature Fighters"
  miniature_fighters_desc: "With smaller fighters we will be able to carry more of them into battle without sacrificing much firepower, as well as reducing the weight of the Mothership's load"
  
  aerial_hangars: "Aerial Hangars"
  aerial_hangars_desc: "Aerial Hangars attached to the mothership allows us to fit even more miniature fighters onto the top of the aircraft, allowing for increased firepower and further reach."
-
+ 
  mothership: "Mothership"
-
+ 
  transport_planes_cat: "Transport Planes"
  RESEARCH_SHARING_VALUE_SCIENTISTS: "$VALUE|H1%$"
+ naval_minelaying_research:0 "Minelaying Research"
+ naval_minelaying_research_desc:0 "Developments in magnetic detection and stable ignition sources for naval explosives."

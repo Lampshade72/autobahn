@@ -1713,7 +1713,7 @@ tactic_cc_order_227 = {
         phase = close_combat
         tag = SOV
         hardness < .05
-        date > 1939-01-01
+        date > 1939.01.01
         OR = {
             is_fighting_in_terrain = urban
             
