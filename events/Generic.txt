@@ -109,9 +109,7 @@ country_event = {
  
 	option = {
 		name = generic.16.a
-		effect_tooltip = {
-			add_opinion_modifier = { target = FROM modifier = rejected_demands }
-		}
+
 	}	
 }
  
